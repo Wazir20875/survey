@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Health and Wellbeing – NHS Staff Survey Insights 2024</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #212b32;
+    }
+
+    header {
+      background-color: #005EB8;
+      color: white;
+      padding: 1.5rem 1rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2rem;
+      margin: 0;
+    }
+
+    nav {
+      background-color: #003A6D;
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      text-decoration: none;
+      margin: 0 0.5rem;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #007F3B;
+    }
+
+    section.content {
+      padding: 2rem;
+      background-color: #ffffff;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    section.content h2 {
+      font-size: 1.5rem;
+      color: #005EB8;
+      margin-bottom: 1rem;
+    }
+
+    section.content p {
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
+    }
+
+    .btn-powerbi {
+      background-color: #007F3B;
+      color: white;
+      padding: 1rem 1.5rem;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 2rem;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-powerbi:hover {
+      background-color: #005EB8;
+    }
+
+    .survey-link {
+      display: block;
+      text-align: center;
+      margin-top: 2rem;
+      font-weight: bold;
+      color: #005EB8;
+      text-decoration: none;
+    }
+
+    .survey-link:hover {
+      text-decoration: underline;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      margin: 2rem 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="../index/1-home.html">Home</a>
+    <a href="page3-flexible.html">Flexible Working</a>
+    <a href="page4-bullying.html">Bullying and Harassment</a>
+    <a href="page5-violence.html">Violence</a>
+    <a href="page6-burnout.html">Burnout</a>
+  </nav>
+
+  <header>
+    <h1><strong>Health and Wellbeing</strong></h1>
+  </header>
+
+  <section class="content">
+    <h2>Top Performing NHS Organisations – Survey Question 11a</h2>
+    <p>
+      Survey Question 11a – “My organisation takes positive action on health and well-being” – the table below highlights NHS organisations with the highest proportion of staff who agreed or strongly agreed with this statement.
+    </p>
+
+    <div style="text-align: center;">
+      <img src="../images/health-wellbeing.jpg" alt="Top Performing NHS Organisations" />
+    </div>
+
+    <h3>Health and Wellbeing – Question 11a: % of staff selecting "Agree" or "Strongly Agree"</h3>
+    <p>
+      The table below shows the 12 NHS organisations with the lowest scores for this question.
+    </p>
+
+    <div style="text-align: center;">
+      <img src="../images/health-wellbeing1.jpg" alt="Worst Performing NHS Organisations" />
+    </div>
+
+    <div style="text-align: center;">
+      <a class="btn-powerbi" href="https://app.powerbi.com/groups/me/reports/033f70ff-0d31-4c0b-8d84-d39882d06e84/bd4ca5e0a8d008185e94?experience=power-bi" target="_blank">
+        View Full Power BI Dashboard
+      </a>
+    </div>
+
+    <a class="survey-link" href="https://nhssurveys.co.uk/nss/survey-information/" target="_blank">
+      Link to NHS Staff Survey Data
+    </a>
+  </section>
+
+</body>
+</html>

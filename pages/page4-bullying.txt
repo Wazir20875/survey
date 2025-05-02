@@ -1,0 +1,42 @@
+<!-- ============================== -->
+<!-- page4-bullying.html -->
+<!-- ============================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bullying and Harassment – NHS Staff Survey Insights 2024</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <nav>
+    <a href="../index/1-home.html">Home</a>
+    <a href="page2-hwb.html">Health and Wellbeing</a>
+    <a href="page3-flexible.html">Flexible Working</a>
+    <a href="page5-violence.html">Violence</a>
+    <a href="page6-burnout.html">Burnout</a>
+  </nav>
+  <header>
+    <h1><strong>Bullying and Harassment</strong></h1>
+  </header>
+  <section class="content">
+    <h2>Lowest Bullying and Harassment Scores – Survey Question 14a</h2>
+    <p>Survey Question 14a – "In the last 12 months have you experienced harassment, bullying or abuse at work from managers or colleagues?" – here are the organisations with the highest rates reported.</p>
+    <div style="text-align: center;">
+      <img src="../images/bullying.jpg" alt="Bullying and Harassment Worst Performers" />
+    </div>
+    <h3>Best Performing Organisations</h3>
+    <p>Organisations with the lowest levels reported are shown below.</p>
+    <div style="text-align: center;">
+      <img src="../images/bullying1.jpg" alt="Bullying and Harassment Best Performers" />
+    </div>
+    <div style="text-align: center;">
+      <a class="btn-powerbi" href="https://app.powerbi.com/groups/me/reports/033f70ff-0d31-4c0b-8d84-d39882d06e84/bd4ca5e0a8d008185e94?experience=power-bi" target="_blank">
+        View Full Power BI Dashboard
+      </a>
+    </div>
+    <a class="survey-link" href="https://nhssurveys.co.uk/nss/survey-information/" target="_blank">Link to NHS Staff Survey Data</a>
+  </section>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!-- save as pages/page3-flexible.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexible Working – NHS Staff Survey Insights 2024</title>
+  <style>
+    /* Use same styles as page2-hwb */
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="../index/1-home.html">Home</a>
+    <a href="page2-hwb.html">Health and Wellbeing</a>
+    <a href="page4-bullying.html">Bullying and Harassment</a>
+    <a href="page5-violence.html">Violence</a>
+    <a href="page6-burnout.html">Burnout</a>
+  </nav>
+
+  <header>
+    <h1><strong>Flexible Working</strong></h1>
+  </header>
+
+  <section class="content">
+    <h2>Top Performing NHS Organisations – Survey Question 5a</h2>
+    <p>
+      Survey Question 5a – “I am able to access flexible working options” – the chart below shows which NHS organisations lead in supporting flexible arrangements.
+    </p>
+
+    <div style="text-align: center;">
+      <img src="../images/flexible-working.jpg" alt="Flexible Working Best Performers" />
+    </div>
+
+    <h3>Lowest Scoring Organisations for Flexible Working</h3>
+    <p>The graph below shows the 12 trusts with the lowest scores.</p>
+
+    <div style="text-align: center;">
+      <img src="../images/flexible-working1.jpg" alt="Flexible Working Worst Performers" />
+    </div>
+
+    <div style="text-align: center;">
+      <a class="btn-powerbi" href="https://app.powerbi.com/groups/me/reports/033f70ff-0d31-4c0b-8d84-d39882d06e84/bd4ca5e0a8d008185e94?experience=power-bi" target="_blank">
+        View Full Power BI Dashboard
+      </a>
+    </div>
+
+    <a class="survey-link" href="https://nhssurveys.co.uk/nss/survey-information/" target="_blank">
+      Link to NHS Staff Survey Data
+    </a>
+  </section>
+
+</body>
+</html>

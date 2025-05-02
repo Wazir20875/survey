@@ -1,0 +1,42 @@
+<!-- ============================== -->
+<!-- page5-violence.html -->
+<!-- ============================== -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Violence – NHS Staff Survey Insights 2024</title>
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <nav>
+    <a href="../index/1-home.html">Home</a>
+    <a href="page2-hwb.html">Health and Wellbeing</a>
+    <a href="page3-flexible.html">Flexible Working</a>
+    <a href="page4-bullying.html">Bullying and Harassment</a>
+    <a href="page6-burnout.html">Burnout</a>
+  </nav>
+  <header>
+    <h1><strong>Violence</strong></h1>
+  </header>
+  <section class="content">
+    <h2>Reported Incidents of Violence – Survey Question 15a</h2>
+    <p>Survey Question 15a – "In the last 12 months have you experienced physical violence at work from patients, relatives or the public?" – this shows reported violence levels.</p>
+    <div style="text-align: center;">
+      <img src="../images/violence.jpg" alt="Violence Rates by Trust" />
+    </div>
+    <h3>Trusts with Lowest Incidents</h3>
+    <p>Organisations with the least violence reported are shown below.</p>
+    <div style="text-align: center;">
+      <img src="../images/violence1.jpg" alt="Lowest Violence Rates" />
+    </div>
+    <div style="text-align: center;">
+      <a class="btn-powerbi" href="https://app.powerbi.com/groups/me/reports/033f70ff-0d31-4c0b-8d84-d39882d06e84/bd4ca5e0a8d008185e94?experience=power-bi" target="_blank">
+        View Full Power BI Dashboard
+      </a>
+    </div>
+    <a class="survey-link" href="https://nhssurveys.co.uk/nss/survey-information/" target="_blank">Link to NHS Staff Survey Data</a>
+  </section>
+</body>
+</html>
