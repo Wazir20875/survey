@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Search NHS Trust Scores – More</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      color: #212b32;
+    }
+    header {
+      background-color: #005EB8;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #003087;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      max-width: 900px;
+      margin: 0 auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    input {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    select {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 1rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    th {
+      background-color: #e0e0e0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🔎 NHS Trust Search Tool</h1>
+    <p>Type a few letters to explore trust scores by category</p>
+  </header>
+  <nav>
+    <a href="1-home.html">Home</a>
+  </nav>
+  <main>
+    <input type="text" id="orgInput" placeholder="Start typing a trust name..." />
+    <select id="dropdown"></select>
+    <div id="results"></div>
+  </main>
+  <script>
+    const dataset = {"FIRST COMMUNITY HEALTH AND CARE CIC":{"Health and Wellbeing":80.6},"NAVIGO HEALTH AND SOCIAL CARE CIC":{"Health and Wellbeing":77.9},"NHS GLOUCESTERSHIRE INTEGRATED CARE BOARD":{"Health and Wellbeing":77.5,"Flexible Working":86.4},"CAMBRIDGESHIRE COMMUNITY SERVICES NHS TRUST":{"Health and Wellbeing":75.6},"LEEDS COMMUNITY HEALTHCARE NHS TRUST":{"Health and Wellbeing":75.5},"SURREY AND SUSSEX HEALTHCARE NHS TRUST":{"Health and Wellbeing":75.2},"LINCOLNSHIRE COMMUNITY HEALTH SERVICES NHS TRUST":{"Health and Wellbeing":74.6},"SOMERSET NHS FOUNDATION TRUST":{"Health and Wellbeing":74.5},"ISLE OF WIGHT NHS TRUST":{"Health and Wellbeing":73.8},"THE CLATTERBRIDGE CANCER CENTRE NHS FOUNDATION TRUST":{"Health and Wellbeing":73.5},"WARRINGTON AND HALTON TEACHING HOSPITALS NHS FOUNDATION TRUST":{"Health and Wellbeing":73.3},"AVON AND WILTSHIRE MENTAL HEALTH PARTNERSHIP NHS TRUST":{"Health and Wellbeing":73.2}};
+
+    const orgInput = document.getElementById('orgInput');
+    const dropdown = document.getElementById('dropdown');
+    const resultsDiv = document.getElementById('results');
+
+    orgInput.addEventListener('input', function () {
+      const value = this.value.toLowerCase();
+      const matches = Object.keys(dataset).filter(name => name.toLowerCase().includes(value));
+      dropdown.innerHTML = '';
+      matches.forEach(name => {
+        const option = document.createElement('option');
+        option.value = name;
+        option.textContent = name;
+        dropdown.appendChild(option);
+      });
+      if (matches.length === 1) {
+        showScores(matches[0]);
+      } else {
+        resultsDiv.innerHTML = '';
+      }
+    });
+
+    dropdown.addEventListener('change', function () {
+      showScores(this.value);
+    });
+
+    function showScores(trustName) {
+      const data = dataset[trustName];
+      if (!data) return;
+      let table = '<table><tr><th>Category</th><th>Score (%)</th></tr>';
+      for (let cat in data) {
+        table += `<tr><td>${cat}</td><td>${data[cat].toFixed(1)}%</td></tr>`;
+      }
+      table += '</table>';
+      resultsDiv.innerHTML = `<h3>${trustName}</h3>` + table;
+    }
+  </script>
+</body>
+</html>
