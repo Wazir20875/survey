@@ -26,11 +26,38 @@
 
     nav {
       background-color: #003A6D;
+    }
+
+    .menu-container {
+      display: none;
+      padding: 1rem;
+    }
+
+    .menu-label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      font-size: 1.8rem;
+      color: white;
+      margin-top: 0.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       padding: 1rem 0;
       text-align: center;
     }
 
-    nav a {
+    .nav-links a {
       color: white;
       padding: 0.8rem 1.5rem;
       font-size: 1rem;
@@ -40,8 +67,25 @@
       transition: background-color 0.3s ease;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       background-color: #007F3B;
+    }
+
+    @media (max-width: 768px) {
+      .menu-container {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 1rem;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
     }
 
     section.content {
@@ -108,12 +152,23 @@
     <h1><strong>Bullying and Harassment</strong></h1>
   </header>
 
-  <nav>
-    <a href="1-home.html">Home</a>
-    <a href="page2-hwb.html">Health and Wellbeing</a>
-    <a href="page3-flexible.html">Flexible Working</a>
-    <a href="page5-violence.html">Violence</a>
-    <a href="page6-burnout.html">Burnout</a>
+  <nav class="navbar">
+    <!-- Mobile menu button -->
+    <div class="menu-container">
+      <div class="menu-label" onclick="toggleMenu()">
+        <div>Menu</div>
+        <div class="menu-icon">☰</div>
+      </div>
+    </div>
+
+    <!-- Navigation links -->
+    <div class="nav-links" id="navLinks">
+      <a href="1-home.html">Home</a>
+      <a href="page2-hwb.html">Health and Wellbeing</a>
+      <a href="page3-flexible.html">Flexible Working</a>
+      <a href="page5-violence.html">Violence</a>
+      <a href="page6-burnout.html">Burnout</a>
+    </div>
   </nav>
 
   <section class="content">
@@ -145,6 +200,12 @@
       Link to NHS Staff Survey Data
     </a>
   </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
