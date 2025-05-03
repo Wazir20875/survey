@@ -29,32 +29,15 @@
       margin: 0;
     }
 
-    .navbar {
+    nav {
       background-color: #003087;
-    }
-
-    .menu-container {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 1rem;
-    }
-
-    .menu-icon {
-      font-size: 1.8rem;
-      color: white;
-      cursor: pointer;
-      display: none;
-    }
-
-    .nav-links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 0.5rem 0;
+      padding: 0.8rem;
     }
 
-    .nav-links a {
+    nav a {
       color: white;
       text-decoration: none;
       margin: 0.5rem 1rem;
@@ -63,32 +46,8 @@
       transition: background 0.3s ease;
     }
 
-    .nav-links a:hover {
+    nav a:hover {
       background-color: #007F3B;
-    }
-
-    @media (max-width: 768px) {
-      .menu-icon {
-        display: block;
-      }
-
-      .nav-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #003087;
-      }
-
-      .nav-links a {
-        text-align: left;
-        padding: 1rem;
-        margin: 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
-      }
-
-      .nav-links.active {
-        display: flex;
-      }
     }
 
     main {
@@ -194,7 +153,7 @@
     <p>🌿 Putting Staff Wellbeing and Safety First</p>
   </header>
 
-  <!-- Responsive Navbar -->
+<!-- Responsive Navbar -->
   <nav class="navbar">
     <div class="menu-container">
       <div style="color: white; font-weight: bold;">Menu</div>
@@ -210,9 +169,39 @@
   </nav>
 
   <main>
-    <!-- existing content remains unchanged -->
-    <p>Welcome to the NHS Staff Survey Insights Platform...</p>
-    <!-- (rest of main content remains as you had it) -->
+    <p>Welcome to the NHS Staff Survey Insights Platform. This platform provides in-depth results and analysis from the <strong>2024 NHS Staff Survey</strong>, focusing on the most important factors that contribute to a safe, supportive, and healthy working environment for NHS staff.</p>
+
+    <p>We go beyond the standard survey summaries to bring you powerful visual dashboards and interactive tools that highlight how NHS organisations across England are performing on key themes such as <strong>Health and Wellbeing</strong>, <strong>Bullying and Harassment</strong>, <strong>Violence</strong>, <strong>Burnout</strong>, and <strong>Flexible Working</strong>.</p>
+
+    <h2>📊 What You’ll Find Here</h2>
+    <p><strong>Focused Dashboards</strong><br>
+    Interactive, easy-to-use dashboards built to help NHS staff, leaders, and stakeholders explore national trends and compare organisational performance across survey themes.</p>
+
+    <p><strong>Trust Rankings</strong><br>
+    See the <strong>top 10</strong> and <strong>bottom 10</strong> NHS organisations for each category. These pages include a graph and a table showing performance data alongside the specific staff survey questions used.</p>
+
+    <p><strong>Power BI Dashboard</strong><br>
+    Dive deeper into the full dataset with our comprehensive Power BI dashboard. Explore performance from <strong>2021 to 2024</strong>, covering more questions and providing detailed comparisons across NHS trusts.</p>
+
+    <p><strong>Data Transparency</strong><br>
+    All survey scores are shown clearly for every participating NHS trust, giving you a fair and full view of the landscape.</p>
+
+    <h2>🚀 How to Use This Platform</h2>
+    <p>Use the <strong>top menu</strong> to navigate between themed pages such as <em>Health and Wellbeing</em>, <em>Violence</em>, <em>Burnout</em>, and more.</p>
+
+    <p>Alternatively, you can click the <strong>buttons at the bottom of the homepage</strong> to go directly to a specific category.</p>
+
+    <p>On each theme page, you'll find:</p>
+    <ul>
+      <li>A visual <strong>graph</strong> showing how different NHS organisations performed</li>
+      <li>A ranked <strong>table</strong> of the highest and lowest performing trusts</li>
+      <li>The <strong>specific staff survey question</strong> related to that theme</li>
+    </ul>
+
+    <p>To explore further, visit the Power BI page where the full dashboard is hosted. You’ll be able to see performance trends across more questions and compare NHS trusts from <strong>2021 to 2024</strong>.</p>
+
+    <h2>💡 Why This Matters</h2>
+    <p>Creating safer, healthier workplaces for NHS staff is crucial — not just for staff wellbeing, but for delivering outstanding patient care. This platform is designed to support shared learning, highlight best practice, and drive real improvement across the NHS.</p>
   </main>
 
   <section class="categories">
@@ -245,12 +234,6 @@
   <footer>
     <p>To access full NHS Staff Survey data, visit the <a href="https://nhssurveys.co.uk/nss/survey-information/" target="_blank">NHS England Staff Survey Data website</a>.</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('active');
-    }
-  </script>
 
 </body>
 </html>
