@@ -100,6 +100,21 @@
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
       margin: 2rem 0;
     }
+
+    /* Added styles for mobile "Menu" alignment */
+    @media (max-width: 768px) {
+      .menu-container {
+        display: flex;
+        justify-content: flex-start;
+        padding-left: 1rem;
+      }
+
+      .menu-label {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
   </style>
 </head>
 <body>
@@ -109,18 +124,19 @@
   </header>
 
   <nav class="navbar">
-  <div class="menu-container">
-    <div class="menu-label" style="color: white;">
-      <div>Menu</div>
-      <div class="menu-icon" onclick="toggleMenu()">☰</div>
+    <div class="menu-container">
+      <div class="menu-label" style="color: white;">
+        <div>Menu</div>
+        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+      </div>
     </div>
-  </div>
-  <div class="nav-links" id="navLinks">
-    <a href="1-home.html">Home</a>
-    <a href="page3-flexible.html">Flexible Working</a>
-    <a href="page4-bullying.html">Bullying and Harassment</a>
-    <a href="page5-violence.html">Violence</a>
-    <a href="page6-burnout.html">Burnout</a>
+    <div class="nav-links" id="navLinks">
+      <a href="1-home.html">Home</a>
+      <a href="page3-flexible.html">Flexible Working</a>
+      <a href="page4-bullying.html">Bullying and Harassment</a>
+      <a href="page5-violence.html">Violence</a>
+      <a href="page6-burnout.html">Burnout</a>
+    </div>
   </nav>
 
   <section class="content">
