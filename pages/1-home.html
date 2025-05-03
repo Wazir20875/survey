@@ -29,15 +29,32 @@
       margin: 0;
     }
 
-    nav {
+    .navbar {
       background-color: #003087;
+    }
+
+    .menu-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 1rem;
+    }
+
+    .menu-icon {
+      font-size: 1.8rem;
+      color: white;
+      cursor: pointer;
+      display: none;
+    }
+
+    .nav-links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      padding: 0.8rem;
+      padding: 0.5rem 0;
     }
 
-    nav a {
+    .nav-links a {
       color: white;
       text-decoration: none;
       margin: 0.5rem 1rem;
@@ -46,8 +63,32 @@
       transition: background 0.3s ease;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       background-color: #007F3B;
+    }
+
+    @media (max-width: 768px) {
+      .menu-icon {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #003087;
+      }
+
+      .nav-links a {
+        text-align: left;
+        padding: 1rem;
+        margin: 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
     }
 
     main {
@@ -153,7 +194,7 @@
     <p>🌿 Putting Staff Wellbeing and Safety First</p>
   </header>
 
-<!-- Responsive Navbar -->
+  <!-- Responsive Navbar -->
   <nav class="navbar">
     <div class="menu-container">
       <div style="color: white; font-weight: bold;">Menu</div>
@@ -168,7 +209,7 @@
     </div>
   </nav>
 
-  <main>
+ <main>
     <p>Welcome to the NHS Staff Survey Insights Platform. This platform provides in-depth results and analysis from the <strong>2024 NHS Staff Survey</strong>, focusing on the most important factors that contribute to a safe, supportive, and healthy working environment for NHS staff.</p>
 
     <p>We go beyond the standard survey summaries to bring you powerful visual dashboards and interactive tools that highlight how NHS organisations across England are performing on key themes such as <strong>Health and Wellbeing</strong>, <strong>Bullying and Harassment</strong>, <strong>Violence</strong>, <strong>Burnout</strong>, and <strong>Flexible Working</strong>.</p>
@@ -234,6 +275,12 @@
   <footer>
     <p>To access full NHS Staff Survey data, visit the <a href="https://nhssurveys.co.uk/nss/survey-information/" target="_blank">NHS England Staff Survey Data website</a>.</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+  </script>
 
 </body>
 </html>
