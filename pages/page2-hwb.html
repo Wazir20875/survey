@@ -26,11 +26,38 @@
 
     nav {
       background-color: #003A6D;
+    }
+
+    .menu-container {
+      display: none;
+      padding: 1rem;
+    }
+
+    .menu-label {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .menu-icon {
+      font-size: 1.8rem;
+      color: white;
+      margin-top: 0.2rem;
+    }
+
+    .nav-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
       padding: 1rem 0;
       text-align: center;
     }
 
-    nav a {
+    .nav-links a {
       color: white;
       padding: 0.8rem 1.5rem;
       font-size: 1rem;
@@ -40,7 +67,7 @@
       transition: background-color 0.3s ease;
     }
 
-    nav a:hover {
+    .nav-links a:hover {
       background-color: #007F3B;
     }
 
@@ -101,18 +128,23 @@
       margin: 2rem 0;
     }
 
-    /* Added styles for mobile "Menu" alignment */
+    /* MOBILE STYLES */
     @media (max-width: 768px) {
       .menu-container {
         display: flex;
         justify-content: flex-start;
-        padding-left: 1rem;
       }
 
-      .menu-label {
-        display: flex;
+      .nav-links {
+        display: none;
         flex-direction: column;
         align-items: flex-start;
+        padding-left: 1rem;
+        background-color: #003A6D;
+      }
+
+      .nav-links.active {
+        display: flex;
       }
     }
   </style>
@@ -124,12 +156,15 @@
   </header>
 
   <nav class="navbar">
+    <!-- Menu button for mobile only -->
     <div class="menu-container">
-      <div class="menu-label" style="color: white;">
+      <div class="menu-label" onclick="toggleMenu()">
         <div>Menu</div>
-        <div class="menu-icon" onclick="toggleMenu()">☰</div>
+        <div class="menu-icon">☰</div>
       </div>
     </div>
+
+    <!-- Navigation links -->
     <div class="nav-links" id="navLinks">
       <a href="1-home.html">Home</a>
       <a href="page3-flexible.html">Flexible Working</a>
